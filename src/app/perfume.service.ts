@@ -25,4 +25,9 @@ export class PerfumeService {
   addPerfume(perfume: any): Observable<Perfume>{
     return this.http.post<Perfume>('http://ec2-3-87-16-94.compute-1.amazonaws.com:8080/perfumes/', perfume);
   }
+
+  deletePerfume(id: string): Observable<Perfume>{
+    return this.http.delete<Perfume>('http://ec2-3-87-16-94.compute-1.amazonaws.com:8080/perfumes/' + id);
+  }
+
 }

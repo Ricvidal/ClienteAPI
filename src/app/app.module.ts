@@ -6,15 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClienteListagemComponent } from './cliente-listagem/cliente-listagem.component';
-import { ClienteDetalheComponent } from './cliente-detalhe/cliente-detalhe.component';
+import { MarcaListagemComponent } from './marca-listagem/marca-listagem.component';
+import { MarcaDetalheComponent } from './marca-detalhe/marca-detalhe.component';
 
 
 import { TableModule } from 'primeng/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
-import { EssenciaComponent } from './essencia/essencia.component';
+//import { EssenciaComponent } from './essencia/essencia.component';
 import { EssenciaDetalheComponent } from './essencia-detalhe/essencia-detalhe.component';
 import { EssenciaListarComponent } from './essencia-listar/essencia-listar.component';
 import { PerfumeDetalheComponent } from './perfume-detalhe/perfume-detalhe.component';
@@ -23,9 +23,9 @@ import { PerfumeListarComponent } from './perfume-listar/perfume-listar.componen
 @NgModule({
   declarations: [
     AppComponent,
-    ClienteListagemComponent,
-    ClienteDetalheComponent,
-    EssenciaComponent,
+    MarcaListagemComponent,
+    MarcaDetalheComponent,
+    //EssenciaComponent,
     EssenciaDetalheComponent,
     EssenciaListarComponent,
     PerfumeDetalheComponent,

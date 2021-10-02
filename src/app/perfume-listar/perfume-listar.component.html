@@ -1,1 +1,23 @@
-<p>perfume-listar works!</p>
+<div class="card">
+    <h2>Listagem de Perfume</h2>
+    <div>
+      <button pButton label="Novo" (click)="onNovo($event)"></button>&nbsp;
+    </div>
+    <p-table [value]="perfume" selectionMode="single" [(selection)]="perfumeSelecionado"
+      dataKey="id" (onRowSelect)="onRowSelect($event)">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="id">Código <p-sortIcon field="id"></p-sortIcon>
+          </th>
+          <th pSortableColumn="nome">Nome <p-sortIcon field="nome"></p-sortIcon>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-perfume>
+        <tr [pSelectableRow]="perfume">
+          <td>{{perfume.id}}</td>
+          <td>{{perfume.nome}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  

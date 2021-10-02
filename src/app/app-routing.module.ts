@@ -1,13 +1,13 @@
-import { ClienteDetalheComponent } from './cliente-detalhe/cliente-detalhe.component';
-import { ClienteListagemComponent } from './cliente-listagem/cliente-listagem.component';
+import { MarcaDetalheComponent } from './marca-detalhe/marca-detalhe.component';
+import { MarcaListagemComponent } from './marca-listagem/marca-listagem.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'clientes', component: ClienteListagemComponent },
-  { path: 'clientes-detalhe/:id', component: ClienteDetalheComponent },
-  { path: 'clientes-detalhe/new', component: ClienteDetalheComponent },
-  { path: '', redirectTo: '/clientes', pathMatch: 'full'}
+  { path: 'marcas', component: MarcaListagemComponent },
+  { path: 'marca-detalhe/:id', component: MarcaDetalheComponent },
+  { path: 'marca-detalhe/new', component: MarcaDetalheComponent },
+  { path: '', redirectTo: '/marcas', pathMatch: 'full'}
 ];
 
 @NgModule({

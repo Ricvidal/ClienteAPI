@@ -1,17 +1,17 @@
-import { ClienteService } from './../cliente.service';
+import { MarcaService } from '../marca.service';
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from '../cliente';
+import { Marca } from '../marca';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-cliente-detalhe',
-  templateUrl: './cliente-detalhe.component.html',
-  styleUrls: ['./cliente-detalhe.component.css']
+  selector: 'app-marca-detalhe',
+  templateUrl: './marca-detalhe.component.html',
+  styleUrls: ['./marca-detalhe.component.css']
 })
-export class ClienteDetalheComponent implements OnInit {
+export class MarcaDetalheComponent implements OnInit {
 
-  constructor(private servico: ClienteService, private router: Router,
+  constructor(private servico: MarcaService, private router: Router,
     private route: ActivatedRoute, private formBuilder: FormBuilder) { }
 
 
@@ -20,8 +20,7 @@ export class ClienteDetalheComponent implements OnInit {
   isNew = false;
 
   meuForm = this.formBuilder.group({
-    nome: ['', [Validators.required, Validators.minLength(3)]],
-    email: ['', [Validators.required, Validators.email]]
+    nome: ['', [Validators.required, Validators.minLength(3)]]
   });
 
   ngOnInit(): void {
@@ -33,9 +32,9 @@ export class ClienteDetalheComponent implements OnInit {
         if (id === 'new') {
           this.isNew = true;
         } else {
-          this.servico.getClienteById(id).subscribe({
-            next: (cliente: Cliente) => {
-              this.meuForm.patchValue(cliente);
+          this.servico.getMarcaById(id).subscribe({
+            next: (marca: Marca) => {
+              this.meuForm.patchValue(marca);
             },
             error: (error: any) => {
               console.log(error);
@@ -45,7 +44,7 @@ export class ClienteDetalheComponent implements OnInit {
                 this.mensagemErro = 'Erro desconhecido';
               }
             },
-            complete: () => console.log('Cliente carregado')
+            complete: () => console.log('Marca carregada')
           });
         }
       }
@@ -53,25 +52,25 @@ export class ClienteDetalheComponent implements OnInit {
   }
 
   onAtualizar(): void {
-    this.servico.updateCliente(this.id, this.meuForm.value).subscribe(
-      retorno => this.router.navigate(['/clientes'])
+    this.servico.updateMarca(this.id, this.meuForm.value).subscribe(
+      retorno => this.router.navigate(['/marcas'])
     );
   }
 
   onIncluir(): void {
-    this.servico.addCliente(this.meuForm.value).subscribe(
-      retorno => this.router.navigate(['/clientes'])
+    this.servico.addMarca(this.meuForm.value).subscribe(
+      retorno => this.router.navigate(['/marcas'])
     );
   }
 
   onExcluir(): void {
-    this.servico.deleteCliente(this.id).subscribe(
-      retorno => this.router.navigate(['/clientes'])
+    this.servico.deleteMarca(this.id).subscribe(
+      retorno => this.router.navigate(['/marcas'])
     );
   }
 
   onCancelar(): void {
-    this.router.navigate(['/clientes']);
+    this.router.navigate(['/marcas']);
   }
 
 }

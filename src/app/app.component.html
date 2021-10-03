@@ -1,7 +1,7 @@
 <div th:fragment="navbar">
 	<div class="container-fluid mb-5">
 		<nav class="navbar fixed-top navbar-dark bg-primary mb-5">
-			<h2 class="text-light">CADASTRO DE PERFUME</h2>
+			<h2 class="text-light"> CADASTRO DE PERFUME</h2>
 			<div class="navbar sticky-top" id="navbarNavAltMarkup">
 				<div class="navbar sticky-top">
 					<div class="nav-item nav-link active text-light">
@@ -17,23 +17,26 @@
 					</a>
 					<a class="navbar-brand nav-item nav-link active text-light" href="/marcas">Marca
 						<span class="sr-only"></span>
-					</a> 
+					</a>
 					<a class="navbar-brand nav-item nav-link active text-light" href="/essencias">Essência<span
 							class="sr-only"></span>
 					</a>
 				</div>
 			</div>
 		</nav>
-	</div>
-	<div class="container">
-		<router-outlet></router-outlet>
+
 	</div>
 </div>
-<footer class="page-footer font-small blue">
-	<!-- Copyright -->
-	<div class="footer-copyright text-center py-5 mt-5">
+<div class="container mt-5">
+	<router-outlet></router-outlet>
+</div>
+
+<div class="footer-copyright text-center py-5 mt-5">
+	<footer class="page-footer font-small blue">
+		<!-- Copyright -->
 		© 2021 Copyright: José Ricardo Quintino Vidal<br>
-	</div>
-	<!-- Copyright -->
-</footer>
+		<!-- Copyright -->
+	</footer>
+</div>
+
 <!-- Footer -->

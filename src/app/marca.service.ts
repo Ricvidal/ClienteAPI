@@ -11,22 +11,22 @@ export class MarcaService {
   constructor(private http: HttpClient) { }
 
   getMarcas(): Observable<Marca[]>{
-    return this.http.get<Marca[]>('http://ec2-52-90-201-225.compute-1.amazonaws.com:8080/marcas');
+    return this.http.get<Marca[]>('http://ec2-3-91-123-95.compute-1.amazonaws.com:8080/marcas');
   }
 
   getMarcaById(id: string): Observable<Marca>{
-    return this.http.get<Marca>('http://ec2-52-90-201-225.compute-1.amazonaws.com:8080/marcas/' + id);
+    return this.http.get<Marca>('http://ec2-3-91-123-95.compute-1.amazonaws.com:8080/marcas/' + id);
   }
 
   updateMarca(id: string, marca: any): Observable<Marca>{
-    return this.http.put<Marca>('http://ec2-52-90-201-225.compute-1.amazonaws.com:8080/marcas/' + id, marca);
+    return this.http.put<Marca>('http://ec2-3-91-123-95.compute-1.amazonaws.com:8080/marcas/' + id, marca);
   }
 
   addMarca(marca: any): Observable<Marca>{
-    return this.http.post<Marca>('http://ec2-52-90-201-225.compute-1.amazonaws.com:8080/marcas/', marca);
+    return this.http.post<Marca>('http://ec2-3-91-123-95.compute-1.amazonaws.com:8080/marcas/', marca);
   }
 
   deleteMarca(id: string): Observable<Marca>{
-    return this.http.delete<Marca>('http://ec2-52-90-201-225.compute-1.amazonaws.com:8080/marcas/' + id);
+    return this.http.delete<Marca>('http://ec2-3-91-123-95.compute-1.amazonaws.com:8080/marcas/' + id);
   }
 }

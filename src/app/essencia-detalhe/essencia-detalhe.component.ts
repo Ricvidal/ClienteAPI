@@ -20,7 +20,7 @@ export class EssenciaDetalheComponent implements OnInit {
   isNew = false;
 
   meuForm = this.formBuilder.group({
-    nome: ['', [Validators.required, Validators.minLength(3)]]
+    descricao: ['', [Validators.required, Validators.minLength(3)]]
   });
 
   ngOnInit(): void {

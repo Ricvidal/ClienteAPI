@@ -20,7 +20,8 @@ export class PerfumeDetalheComponent implements OnInit {
   isNew = false;
 
   meuForm = this.formBuilder.group({
-    nome: ['', [Validators.required, Validators.minLength(3)]]
+    nome: ['', [Validators.required, Validators.minLength(3)]],
+    marca: ['', [Validators.required, Validators.minLength(3)]]
   });
 
   ngOnInit(): void {

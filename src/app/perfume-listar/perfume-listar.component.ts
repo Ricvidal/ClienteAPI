@@ -9,18 +9,18 @@ import { Perfume } from '../perfume';
   styleUrls: ['./perfume-listar.component.css']
 })
 export class PerfumeListarComponent implements OnInit {
-  perfume: Perfume[] = [];
+  perfumes: Perfume[] = [];
   perfumeSelecionado?: Perfume;
 
   constructor(private servico: PerfumeService, private router: Router) { }
 
   ngOnInit(): void {
-    this.onGetPerfume();
+    this.onGetPerfumes();
   }
 
-  onGetPerfume(): void {
+  onGetPerfumes(): void {
     this.servico.getPerfumes().subscribe({
-      next: (perfumes: any) => (this.perfume = perfumes),
+      next: (perfumes: any) => (this.perfumes = perfumes),
       error: (error: any) => console.log(error),
       complete: () => console.log('finalizado')
     });

@@ -3,7 +3,7 @@
     <div>
       <button pButton label="Novo" (click)="onNovo($event)"></button>&nbsp;
     </div>
-    <p-table [value]="perfume" selectionMode="single" [(selection)]="perfumeSelecionado"
+    <p-table [value]="perfumes" selectionMode="single" [(selection)]="perfumeSelecionado"
       dataKey="id" (onRowSelect)="onRowSelect($event)">
       <ng-template pTemplate="header">
         <tr>

@@ -27,11 +27,11 @@
     }
   
     onRowSelect(event: any): void {
-      this.router.navigate(['/marca-detalhe', event.data.id]);
+      this.router.navigate(['/essencia-detalhe', event.data.id]);
     }
   
     onNovo(event: any): void {
-      this.router.navigate(['/marca-detalhe/new']);
+      this.router.navigate(['/essencia-detalhe/new']);
     }
   
   }

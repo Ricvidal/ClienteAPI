@@ -53,7 +53,7 @@ export class EssenciaDetalheComponent implements OnInit {
 
   onAtualizar(): void {
     this.servico.updateEssencia(this.id, this.meuForm.value).subscribe(
-      retorno => this.router.navigate(['/essencia'])
+      retorno => this.router.navigate(['/essencias'])
     );
   }
 

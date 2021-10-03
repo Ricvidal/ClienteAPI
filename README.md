@@ -1,5 +1,13 @@
 # ClienteAPI
 
+## Essa aplicação é uma atividade passada na disciplina de Programação em Ambientes de Rede.
+
+## Finalidade
+    Consumi uma API desenvolvida em Python que está servindo no ambiante cloud9 da Amazon AWS Educate, na máquina vitual de intância EC2 Línux.
+
+## Observações
+    Para poder receber as requisições, precisa ser resolvido o acesso ativando o cors na aplicação servidora .
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
 ## Development server

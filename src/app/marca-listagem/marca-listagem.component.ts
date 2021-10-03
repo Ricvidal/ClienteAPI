@@ -9,18 +9,18 @@ import { Marca } from '../marca';
   styleUrls: ['./marca-listagem.component.css'],
 })
 export class MarcaListagemComponent implements OnInit {
-  marca: Marca[] = [];
+  marcas: Marca[] = [];
   marcaSelecionada?: Marca;
 
   constructor(private servico: MarcaService, private router: Router) { }
 
   ngOnInit(): void {
-    this.onGetMarca();
+    this.onGetMarcas();
   }
 
-  onGetMarca(): void {
+  onGetMarcas(): void {
     this.servico.getMarcas().subscribe({
-      next: (marcas: any) => (this.marca = marcas),
+      next: (marcas: any) => (this.marcas = marcas),
       error: (error: any) => console.log(error),
       complete: () => console.log('finalizado')
     });

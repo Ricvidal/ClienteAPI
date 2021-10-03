@@ -10,12 +10,19 @@
           <th pSortableColumn="id">Código <p-sortIcon field="id"></p-sortIcon>
           </th>
           <th pSortableColumn="nome">Nome <p-sortIcon field="nome"></p-sortIcon>
-        </tr>
+          </th>
+          <th pSortableColumn="marca">Marca <p-sortIcon field="marca"></p-sortIcon>
+          </th>
+          <th pSortableColumn="descricao">Essencia <p-sortIcon field="descricao"></p-sortIcon>
+
+          </tr>
       </ng-template>
       <ng-template pTemplate="body" let-perfume>
         <tr [pSelectableRow]="perfume">
           <td>{{perfume.id}}</td>
           <td>{{perfume.nome}}</td>
+          <td>{{perfume.marca}}</td>
+          <td>{{perfume.essencia}}</td>
         </tr>
       </ng-template>
     </p-table>

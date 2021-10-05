@@ -1,11 +1,12 @@
-<h2>Cadastro de Essência</h2>
+<div class="card">
+<h2 class="mx-2">Cadastro de Essência</h2>
 
 <form [formGroup]="meuForm" (ngSubmit)="onAtualizar()">
   <div class="card">
     <div class="p-fluid">
       <div class="p-field">
         <p>
-          <label for="descricao">Descrição da essência:</label>
+          <label class="mx-2" for="descricao">Descrição da essência:</label>
           <input pInputText id="descricao" type="text" formControlName="descricao" required />
         </p>
       </div>
@@ -21,3 +22,4 @@
   </div>
 </form>
 <p>{{ mensagemErro }}</p>
+</div>

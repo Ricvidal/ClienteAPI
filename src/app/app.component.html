@@ -1,7 +1,8 @@
+<div class="container mb-5">
 <div th:fragment="navbar">
-	<div class="container-fluid mb-5">
-		<nav class="navbar fixed-top navbar-dark bg-primary mb-5">
-			<h2 class="text-light"> CADASTRO DE PERFUME</h2>
+	<div class="container mb-5">
+		<nav class="navbar fixed-top navbar-dark bg-primary">
+			<h2 class="text-light mx-5"> CADASTRO DE PERFUME</h2>
 			<div class="navbar sticky-top" id="navbarNavAltMarkup">
 				<div class="navbar sticky-top">
 					<div class="nav-item nav-link active text-light">
@@ -26,17 +27,18 @@
 		</nav>
 
 	</div>
+	
 </div>
-<div class="container mt-5">
-	<router-outlet></router-outlet>
+<div class="container fixed-paddim py-5">
+	<router-outlet class="container"></router-outlet>
 </div>
 
 <div class="footer-copyright text-center py-5 mt-5">
-	<footer class="page-footer font-small blue">
+	<footer class="page-footer fixed-bottom font-small blue">
 		<!-- Copyright -->
 		© 2021 Copyright: José Ricardo Quintino Vidal<br>
 		<!-- Copyright -->
 	</footer>
+	<!-- Footer -->
 </div>
-
-<!-- Footer -->
+</div>

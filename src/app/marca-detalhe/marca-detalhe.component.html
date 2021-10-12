@@ -2,16 +2,16 @@
 <h2>Cadastro de Marca</h2>
 
 <form [formGroup]="meuForm" (ngSubmit)="onAtualizar()">
-  <div class="card">
-    <div class="p-fluid">
-      <div class="p-field">
+  <div class="card mx-5">
+    <div class="p-fluid mx-5">
+      <div>
         <p>
           <label for="nome">Nome da marca:</label>
           <input pInputText id="nome" type="text" formControlName="nome" required />
         </p>
       </div>
     </div>
-    <div>
+    <div class="p-field mx-5">
       <p>
         <button *ngIf="!isNew" pButton type="submit" label="Atualizar" [disabled]="!meuForm.valid"></button>
         <button *ngIf="isNew" pButton type="button" label="Novo" (click)="onIncluir()" [disabled]="!meuForm.valid"></button>&nbsp;

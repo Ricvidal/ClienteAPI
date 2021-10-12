@@ -1,3 +1,4 @@
+import { Marca } from './../marca';
 import { PerfumeService } from '../perfume.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';

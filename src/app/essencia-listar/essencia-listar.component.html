@@ -1,9 +1,9 @@
 <div class="card">
     <h2 class="mx-2">Listagem de Essência</h2>
-    <div>
-      <button class="mx-2" pButton label="Nova essência" (click)="onNovo($event)"></button>&nbsp;
+    <div class="mx-5">
+      <button pButton label="Nova essência" (click)="onNovo($event)"></button>&nbsp;
     </div>
-    <p-table [value]="essencias" selectionMode="single" [(selection)]="essenciaSelecionada"
+    <p-table class="p-fluid mx-5" [value]="essencias" selectionMode="single" [(selection)]="essenciaSelecionada"
       dataKey="id" (onRowSelect)="onRowSelect($event)">
       <ng-template pTemplate="header">
         <tr>
